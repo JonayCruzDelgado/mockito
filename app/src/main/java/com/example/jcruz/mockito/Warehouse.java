@@ -24,7 +24,7 @@ public class Warehouse implements I_Warehouse {
             products.put(product, inStock(product) - quantity);
         }
 
-        private int inStock(String product) {
+        public int inStock(String product) {
             int quantity = (int) products.get(product);
 
             return quantity;
