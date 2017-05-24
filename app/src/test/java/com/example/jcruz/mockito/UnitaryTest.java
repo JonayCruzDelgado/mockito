@@ -38,4 +38,14 @@ public class UnitaryTest {
         assertEquals(-5,warehouse.inStock("Talisker"));
 
     }
+    @org.junit.Test
+    public void Add() throws Exception {
+        warehouse.add("Talisker", 10);
+        assertEquals(15,warehouse.inStock("Talisker"));
+    }
+    @org.junit.Test
+    public void AddNegative() throws Exception {
+        warehouse.add("Talisker", -2);
+        assertEquals(3,warehouse.inStock("Talisker"));
+    }
 }

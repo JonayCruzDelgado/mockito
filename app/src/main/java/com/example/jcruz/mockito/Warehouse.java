@@ -23,6 +23,9 @@ public class Warehouse implements I_Warehouse {
         public void remove(String product, int quantity) {
             products.put(product, inStock(product) - quantity);
         }
+        public void add (String product, int quantity) {
+        products.put(product, inStock(product) + quantity);
+        }
 
         public int inStock(String product) {
             int quantity = (int) products.get(product);
